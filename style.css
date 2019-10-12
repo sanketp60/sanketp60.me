@@ -1,5 +1,6 @@
 html{
     height: 100vh;
+    scroll-behavior: smooth;
 }
 body{
     padding: 0;
@@ -16,22 +17,37 @@ body{
     height: 100vh;
 }
 
+button{
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 20px;
+    transition: 1s;
+}
+
+
 .maincontent{
     display: flex;
     flex-direction: column;
     background: black;
     color: white;
     height: 100vh;
-    width: 50vw;
+    width: 50%;
     justify-content: space-between;
 }
 
 .splash{
     height: 100vh;
-    width: 50vw;
+    width: 50%;
     background-image: url("img/splash.jpg");
     background-position: top;
     background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 ul{
@@ -51,21 +67,46 @@ h1{
     font-size: 30px;
     font-family: 'Kaushan Script', cursive;
     align-items: center;
-    transition: 1s ease-out;
+    transition: 0.1s ease-out;
 }
 h3{ 
+    padding: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
+button:hover{
+    background: white;
+    color: black;
+    transition: 0.1s ease-out;
+}
+
+.creditTag{
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    background: rgb(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: 0.3s ease-out;
+}
+.creditTag:hover{
+    color:black;
+    background: white;
+    transition: 0.7s ease-out;
+}
 .page1{
     display: flex;
     flex-direction: row;
     scroll-snap-align: start;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 .page2{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     scroll-snap-align: start;
     background: rgb( 25, 27, 31);
@@ -73,6 +114,23 @@ h3{
 .page3{
     scroll-snap-align: start;
     background: #f5f6fa;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .page1{
+        flex-direction: column-reverse;
+    }
+    .pag1{
+        height: auto;
+    }
+    .splash{
+        height: 70px;
+        width: 100%;
+    }
+    .maincontent{
+        width: 100%;
+        height: 70px;
+    }
 }
